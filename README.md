@@ -5,7 +5,8 @@
 - **Actuation:** 3x Servo Motors MG996R (Base Yaw, Shoulder Pitch, Elbow Pitch)
 - **Structure:** Custom laser-cut acrylic chassis (DXF files included)
 - **Original Control Scheme:** Custom serial-parse protocol accepting raw joint-space instructions (e.g., `M1123` to drive Motor 1 to 123 degrees).
-
+- **Software:** FreeCAD, Ardiuno IDE, Visual Studio (All software used are open source)
+  
 ## Code Logic:
 
 The HC-05 recieves a set of data via other devices through bluetooth where the device sends a string of data in a specific formate for example "M1120". The data is futher broken in 2 sets, the first 2 character "M1" serves as the Servo ID and the rest tells how much rotation is needed. If the angle is within range of that specific servo ID then it will move slowly to that position else it gives an error.
